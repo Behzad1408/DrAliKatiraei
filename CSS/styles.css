@@ -1,19 +1,21 @@
-/* General body styles and font */
-body {
-    font-family: 'Vazirmatn', sans-serif;
-    scroll-behavior: smooth;
-}
-
-/* A subtle dotted background pattern for specific sections */
-.dotted-bg {
-    background-color: #ffffff;
-    background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
-    background-size: 15px 15px;
-}
-
-/* Background image for the main hero section */
-.hero-bg {
-    background-image: url('https://placehold.co/1920x1080/e0e7ff/333333?text=%D8%B9%DA%A9%D8%B3+%D8%AD%D8%B1%D9%81%D9%87%E2%80%8C%D8%A7%DB%8C+%D8%A7%D8%B2+%D9%85%D8%B7%D8%A8');
-    background-size: cover;
-    background-position: center;
-}
+/* استایل‌های اصلی و فونت */
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* پس‌زمینه نقطه‌دار */
+        .dotted-bg {
+            background-color: #ffffff;
+            background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+            background-size: 15px 15px;
+        }
+        /* عکس بالای صفحه */
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x1080/e0e7ff/333333?text=%D8%B9%DA%A9%D8%B3+%D8%AD%D8%B1%D9%81%D9%87%E2%80%8C%D8%A7%DB%8C+%D8%A7%D8%B2+%D9%85%D8%B7%D8%A8');
+            background-size: cover;
+            background-position: center;
+        }
+        /* رنگ سفارشی سفید دودی */
+        .text-smoke-white {
+            color: #f5f5f5;
+        }
