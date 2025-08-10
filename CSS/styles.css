@@ -20,13 +20,10 @@ body {
   color: #f5f5f5;
 }
 
-/* برای صفحه‌های بزرگتر مثل تبلت و دسکتاپ */
+/* For bigger screens like tablets and desktops */
 @media (min-width: 768px) {
   .hero-bg {
     background-position: center center;
-    background-size: 60% auto; /* بزرگ‌تر برای دسکتاپ */
+    background-size: 60% auto;
   }
 }
-
-/* background-size: cover;
-  background-position: center; */
