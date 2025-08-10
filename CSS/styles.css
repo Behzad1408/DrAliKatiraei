@@ -10,7 +10,7 @@ body {
 }
 /* Hero Section Background Image */
 .hero-bg {
-  background-image: url("");
+  background-image: url("#");
   background-size: cover;
   background-position: center;
 }
