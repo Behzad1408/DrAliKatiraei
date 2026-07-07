@@ -63,14 +63,14 @@
  .hero-container {
      width: 100%;
      max-width: 1360px;
-     /* افزایش عرض برای استفاده بهتر از فضا */
+     /* Increase width for better space utilization */
      margin: 0 auto;
      padding: 0 clamp(1.5rem, 5vw, 3rem);
-     /* کاهش فضای خالی (مارجین) طرفین */
+     /* Reduce side margins/padding */
      display: grid;
      grid-template-columns: 1.1fr 0.9fr;
      gap: 6rem;
-     /* افزایش فاصله بین متن و عکس */
+     /* Increase spacing between text and image */
      align-items: center;
  }
 
@@ -284,7 +284,7 @@
      position: relative;
      width: 100%;
      max-width: 420px;
-     /* مقداری بزرگتر برای حفظ تناسب با گپ جدید */
+     /* Slightly larger to maintain proportion with the new gap */
  }
 
  .hero-image-wrap::before {
@@ -363,7 +363,7 @@
  }
 
  /* ===== UTILITY CLASSES ===== */
- /* یک کلاس عمومی برای کانتینر تا در تمام سکشن‌ها استفاده کنیم و هم‌راستایی حفظ شود */
+ /* A global container class to use across all sections to maintain alignment */
  .container-standard {
      width: 100%;
      max-width: 1360px;
@@ -372,220 +372,221 @@
  }
 
  /* ===== SERVICES SECTION ===== */
-    .services {
-      padding: 6rem 0;
-      background-color: var(--white);
-      position: relative;
-    }
+ .services {
+     padding: 6rem 0;
+     background-color: var(--white);
+     position: relative;
+ }
 
-    .section-header {
-      text-align: center;
-      margin-bottom: 4rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-    }
+ .section-header {
+     text-align: center;
+     margin-bottom: 4rem;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 0.5rem;
+ }
 
-    .section-eyebrow {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      background: var(--gold-light);
-      padding: 0.25rem 0.75rem;
-      border-radius: 20px;
-      color: #78350f;
-    }
+ .section-eyebrow {
+     font-size: 0.85rem;
+     font-weight: 700;
+     color: var(--gold);
+     text-transform: uppercase;
+     letter-spacing: 0.05em;
+     background: var(--gold-light);
+     padding: 0.25rem 0.75rem;
+     border-radius: 20px;
+     color: #78350f;
+ }
 
-    .section-title {
-      font-size: clamp(1.75rem, 3vw, 2.25rem);
-      font-weight: 800;
-      color: var(--green-800);
-    }
+ .section-title {
+     font-size: clamp(1.75rem, 3vw, 2.25rem);
+     font-weight: 800;
+     color: var(--green-800);
+ }
 
-    .services-grid {
-      display: grid;
-      /* تغییر سایز پایه به 320px تا در لپ‌تاپ دقیقاً ۳ ستون و ۲ ردیف (۶ آیتم) منظم تشکیل شود */
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-    }
+ .services-grid {
+     display: grid;
+     /* Changed base size to 320px to form exactly 3 columns and 2 rows (6 items) neatly on laptops */
+     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+     gap: 2rem;
+ }
 
-    /* Hover-Lift Card Pattern */
-    .service-card {
-      background: var(--bg-dot);
-      border: 1px solid #e5e7eb;
-      border-radius: var(--radius-md);
-      padding: 2.5rem 2rem;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
+ /* Hover-Lift Card Pattern */
+ .service-card {
+     background: var(--bg-dot);
+     border: 1px solid #e5e7eb;
+     border-radius: var(--radius-md);
+     padding: 2.5rem 2rem;
+     position: relative;
+     overflow: hidden;
+     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+ }
 
-    .service-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 4px;
-      background: var(--green-600);
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.4s ease;
-    }
+ .service-card::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     right: 0;
+     width: 100%;
+     height: 4px;
+     background: var(--green-600);
+     transform: scaleX(0);
+     transform-origin: right;
+     transition: transform 0.4s ease;
+ }
 
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: var(--shadow-card);
-      border-color: var(--green-100);
-      background: var(--white);
-    }
+ .service-card:hover {
+     transform: translateY(-10px);
+     box-shadow: var(--shadow-card);
+     border-color: var(--green-100);
+     background: var(--white);
+ }
 
-    .service-card:hover::before {
-      transform: scaleX(1);
-    }
+ .service-card:hover::before {
+     transform: scaleX(1);
+ }
 
-    .service-icon-box {
-      width: 56px;
-      height: 56px;
-      background: var(--green-50);
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 0.5rem;
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
+ .service-icon-box {
+     width: 56px;
+     height: 56px;
+     background: var(--green-50);
+     border-radius: var(--radius-sm);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-bottom: 0.5rem;
+     transition: background 0.3s ease, transform 0.3s ease;
+ }
 
-    .service-card:hover .service-icon-box {
-      background: var(--green-100);
-      transform: scale(1.05) rotate(-5deg);
-    }
+ .service-card:hover .service-icon-box {
+     background: var(--green-100);
+     transform: scale(1.05) rotate(-5deg);
+ }
 
-    .service-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--green-800);
-    }
+ .service-title {
+     font-size: 1.25rem;
+     font-weight: 700;
+     color: var(--green-800);
+ }
 
-    .service-desc {
-      font-size: 0.9rem;
-      font-weight: 400;
-      color: var(--text-mid);
-      line-height: 1.8;
-      flex-grow: 1;
-    }
+ .service-desc {
+     font-size: 0.9rem;
+     font-weight: 400;
+     color: var(--text-mid);
+     line-height: 1.8;
+     flex-grow: 1;
+ }
 
-    /* Action Button (Styled to look like a clean text link) */
-    .care-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--green-700);
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      font-family: inherit;
-      margin-top: 1rem;
-      transition: gap 0.3s ease, color 0.3s ease;
-    }
+ /* Action Button (Styled to look like a clean text link) */
+ .care-btn {
+     display: inline-flex;
+     align-items: center;
+     gap: 0.5rem;
+     font-size: 0.85rem;
+     font-weight: 700;
+     color: var(--green-700);
+     background: none;
+     border: none;
+     cursor: pointer;
+     padding: 0;
+     font-family: inherit;
+     margin-top: 1rem;
+     transition: gap 0.3s ease, color 0.3s ease;
+ }
 
-    .service-card:hover .care-btn {
-      gap: 0.75rem;
-      color: var(--green-600);
-    }
+ .service-card:hover .care-btn {
+     gap: 0.75rem;
+     color: var(--green-600);
+ }
 
-    /* ===== MODAL (POP-UP) STYLES ===== */
-    #care-modal {
-      position: fixed;
-      inset: 0;
-      z-index: 1000;
-      background: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(4px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-      /* انیمیشن نرم برای باز شدن مودال */
-      opacity: 1;
-      visibility: visible;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-    }
+ /* ===== MODAL (POP-UP) STYLES ===== */
+ #care-modal {
+     position: fixed;
+     inset: 0;
+     z-index: 1000;
+     background: rgba(0, 0, 0, 0.4);
+     backdrop-filter: blur(4px);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 1rem;
+     /* Smooth animation for opening the modal */
+     opacity: 1;
+     visibility: visible;
+     transition: opacity 0.3s ease, visibility 0.3s ease;
+ }
 
-    #care-modal.hidden {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
+ #care-modal.hidden {
+     opacity: 0;
+     visibility: hidden;
+     pointer-events: none;
+ }
 
-    .modal-box {
-      background: var(--white);
-      width: 100%;
-      max-width: 500px;
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow-img);
-      padding: 2rem;
-      position: relative;
-      transform: scale(1);
-      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
+ .modal-box {
+     background: var(--white);
+     width: 100%;
+     max-width: 500px;
+     border-radius: var(--radius-md);
+     box-shadow: var(--shadow-img);
+     padding: 2rem;
+     position: relative;
+     transform: scale(1);
+     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ }
 
-    #care-modal.hidden .modal-box {
-      transform: scale(0.9);
-    }
+ #care-modal.hidden .modal-box {
+     transform: scale(0.9);
+ }
 
-    .modal-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.5rem;
-      border-bottom: 1px solid #e5e7eb;
-      padding-bottom: 1rem;
-    }
+ .modal-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 1.5rem;
+     border-bottom: 1px solid #e5e7eb;
+     padding-bottom: 1rem;
+ }
 
-    .modal-header h3 {
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: var(--green-800);
-    }
+ .modal-header h3 {
+     font-size: 1.2rem;
+     font-weight: 800;
+     color: var(--green-800);
+ }
 
-    #close-modal-btn {
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      color: var(--text-muted);
-      cursor: pointer;
-      line-height: 1;
-      padding: 0.2rem;
-      transition: color 0.2s;
-    }
+ #close-modal-btn {
+     background: none;
+     border: none;
+     font-size: 1.5rem;
+     color: var(--text-muted);
+     cursor: pointer;
+     line-height: 1;
+     padding: 0.2rem;
+     transition: color 0.2s;
+ }
 
-    #close-modal-btn:hover {
-      color: #ef4444; /* رنگ قرمز در هاور */
-    }
+ #close-modal-btn:hover {
+     color: #ef4444;
+     /* Red color on hover */
+ }
 
-    #modal-content {
-      color: var(--text-mid);
-      font-size: 0.95rem;
-      line-height: 2;
-    }
+ #modal-content {
+     color: var(--text-mid);
+     font-size: 0.95rem;
+     line-height: 2;
+ }
 
-    #modal-content ul li {
-      margin-bottom: 0.75rem;
-      position: relative;
-    }
-    
-    #modal-content ul li::marker {
-      color: var(--green-600);
-    }
+ #modal-content ul li {
+     margin-bottom: 0.75rem;
+     position: relative;
+ }
+
+ #modal-content ul li::marker {
+     color: var(--green-600);
+ }
 
  /* ===== RESPONSIVE — MOBILE ===== */
  @media (max-width: 992px) {
