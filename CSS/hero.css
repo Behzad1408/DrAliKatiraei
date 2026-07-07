@@ -1,0 +1,633 @@
+ /* ===== RESET & BASE ===== */
+ *,
+ *::before,
+ *::after {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+ :root {
+     --green-800: #166534;
+     --green-700: #15803d;
+     --green-600: #16a34a;
+     --green-50: #f0fdf4;
+     --green-100: #dcfce7;
+     --gold: #b8972a;
+     --gold-light: #f0e08a;
+     --text-dark: #1a1a1a;
+     --text-mid: #374151;
+     --text-muted: #6b7280;
+     --white: #ffffff;
+     --bg-dot: #f9fafb;
+
+     --radius-sm: 8px;
+     --radius-md: 16px;
+     --radius-lg: 24px;
+
+     --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.08);
+     --shadow-img: 0 8px 40px rgba(0, 0, 0, 0.18);
+ }
+
+ body {
+     font-family: "Vazirmatn", sans-serif;
+     background-color: var(--bg-dot);
+     background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+     background-size: 15px 15px;
+     color: var(--text-dark);
+     scroll-behavior: smooth;
+     -webkit-font-smoothing: antialiased;
+ }
+
+ /* ===== HERO SECTION ===== */
+ .hero {
+     min-height: 75vh;
+     display: flex;
+     align-items: center;
+     padding: 3rem 0 2rem;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .hero::before {
+     content: "";
+     position: absolute;
+     top: -120px;
+     left: -120px;
+     width: 480px;
+     height: 480px;
+     background: radial-gradient(circle, rgba(22, 101, 52, 0.07) 0%, transparent 70%);
+     pointer-events: none;
+ }
+
+ .hero-container {
+     width: 100%;
+     max-width: 1360px;
+     /* افزایش عرض برای استفاده بهتر از فضا */
+     margin: 0 auto;
+     padding: 0 clamp(1.5rem, 5vw, 3rem);
+     /* کاهش فضای خالی (مارجین) طرفین */
+     display: grid;
+     grid-template-columns: 1.1fr 0.9fr;
+     gap: 6rem;
+     /* افزایش فاصله بین متن و عکس */
+     align-items: center;
+ }
+
+ /* ===== RIGHT COLUMN — CONTENT ===== */
+ .hero-content {
+     display: flex;
+     flex-direction: column;
+     gap: 1.5rem;
+ }
+
+ /* name & title */
+ .hero-eyebrow {
+     font-size: 0.85rem;
+     font-weight: 600;
+     letter-spacing: 0.05em;
+     color: var(--green-700);
+     text-transform: uppercase;
+     margin-bottom: 0.25rem;
+ }
+
+ .hero-name {
+     font-size: clamp(2rem, 3.5vw, 3rem);
+     font-weight: 800;
+     color: var(--green-800);
+     line-height: 1.2;
+ }
+
+ .hero-title {
+     font-size: clamp(1rem, 1.5vw, 1.2rem);
+     font-weight: 500;
+     color: var(--text-mid);
+     border-right: 3px solid var(--green-600);
+     padding-right: 0.75rem;
+     line-height: 1.5;
+ }
+
+ /* stats row */
+ .hero-stats {
+     display: flex;
+     gap: 1.5rem;
+     flex-wrap: wrap;
+     margin-top: 0.5rem;
+ }
+
+ .stat-item {
+     display: flex;
+     flex-direction: column;
+     gap: 0.25rem;
+ }
+
+ .stat-number {
+     font-size: 1.5rem;
+     font-weight: 800;
+     color: var(--green-800);
+     line-height: 1;
+     display: flex;
+     align-items: center;
+     height: 1.5rem;
+ }
+
+ .stat-label {
+     font-size: 0.75rem;
+     font-weight: 500;
+     color: var(--text-muted);
+ }
+
+ .stat-divider {
+     width: 1px;
+     background: #d1d5db;
+     align-self: stretch;
+ }
+
+ /* bio text */
+ .hero-bio {
+     font-size: 0.95rem;
+     font-weight: 400;
+     color: var(--text-mid);
+     line-height: 1.9;
+     border-top: 1px solid #e5e7eb;
+     padding-top: 1.25rem;
+ }
+
+ /* CTA */
+ .hero-cta {
+     display: flex;
+     align-items: center;
+     gap: 1rem;
+     flex-wrap: wrap;
+     margin-top: 0.5rem;
+ }
+
+ .btn-primary {
+     display: inline-flex;
+     align-items: center;
+     gap: 0.5rem;
+     background: var(--green-800);
+     color: var(--white);
+     font-family: "Vazirmatn", sans-serif;
+     font-size: 0.95rem;
+     font-weight: 700;
+     padding: 0.85rem 2rem;
+     border-radius: var(--radius-sm);
+     border: none;
+     cursor: pointer;
+     text-decoration: none;
+     transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+     box-shadow: 0 4px 14px rgba(22, 101, 52, 0.3);
+ }
+
+ .btn-primary:hover {
+     background: var(--green-700);
+     transform: translateY(-2px);
+     box-shadow: 0 6px 20px rgba(22, 101, 52, 0.4);
+ }
+
+ .btn-primary:active {
+     transform: translateY(0);
+ }
+
+ .btn-phone-hint {
+     font-size: 0.8rem;
+     color: var(--text-muted);
+     font-weight: 500;
+ }
+
+ /* discount banner */
+ .discount-banner {
+     display: inline-flex;
+     align-items: flex-start;
+     gap: 0.75rem;
+     background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+     border: 1px solid var(--gold);
+     border-radius: var(--radius-md);
+     padding: 0.875rem 1.25rem;
+     position: relative;
+     overflow: hidden;
+     margin-top: 0.5rem;
+     box-shadow: 0 4px 12px rgba(184, 151, 42, 0.1);
+ }
+
+ .discount-banner::after {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: -100%;
+     width: 60%;
+     height: 100%;
+     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+     animation: shimmer 3s ease-in-out infinite;
+ }
+
+ @keyframes shimmer {
+     0% {
+         left: -100%;
+     }
+
+     50% {
+         left: 150%;
+     }
+
+     100% {
+         left: 150%;
+     }
+ }
+
+ .discount-icon {
+     font-size: 1.5rem;
+     flex-shrink: 0;
+     margin-top: 2px;
+ }
+
+ .discount-text {
+     display: flex;
+     flex-direction: column;
+     gap: 0.25rem;
+ }
+
+ .discount-label {
+     font-size: 0.75rem;
+     font-weight: 700;
+     letter-spacing: 0.05em;
+     color: var(--gold);
+ }
+
+ .discount-main {
+     font-size: 0.95rem;
+     font-weight: 600;
+     color: #78350f;
+     line-height: 1.6;
+ }
+
+ .discount-keyword {
+     display: inline-block;
+     background: var(--gold);
+     color: var(--white);
+     font-size: 0.8rem;
+     font-weight: 700;
+     padding: 0.15rem 0.6rem;
+     border-radius: 4px;
+     margin: 0 2px;
+ }
+
+ /* ===== LEFT COLUMN — IMAGE ===== */
+ .hero-image-col {
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+ }
+
+ .hero-image-wrap {
+     position: relative;
+     width: 100%;
+     max-width: 420px;
+     /* مقداری بزرگتر برای حفظ تناسب با گپ جدید */
+ }
+
+ .hero-image-wrap::before {
+     content: "";
+     position: absolute;
+     bottom: -16px;
+     right: -16px;
+     width: 100%;
+     height: 100%;
+     background: var(--green-800);
+     border-radius: var(--radius-lg);
+     z-index: 0;
+     opacity: 0.12;
+ }
+
+ .hero-image-wrap::after {
+     content: "";
+     position: absolute;
+     bottom: -8px;
+     right: -8px;
+     width: 100%;
+     height: 100%;
+     border: 2px solid var(--green-800);
+     border-radius: var(--radius-lg);
+     z-index: 0;
+     opacity: 0.25;
+ }
+
+ .hero-img {
+     width: 100%;
+     height: auto;
+     display: block;
+     border-radius: var(--radius-lg);
+     box-shadow: var(--shadow-img);
+     position: relative;
+     z-index: 1;
+     object-fit: cover;
+ }
+
+ /* trust badge */
+ .trust-badge {
+     position: absolute;
+     bottom: 32px;
+     left: -24px;
+     background: var(--white);
+     border-radius: var(--radius-md);
+     padding: 0.75rem 1rem;
+     display: flex;
+     align-items: center;
+     gap: 0.75rem;
+     box-shadow: var(--shadow-card);
+     z-index: 2;
+     border: 1px solid var(--green-100);
+ }
+
+ .trust-badge-icon {
+     font-size: 1.25rem;
+ }
+
+ .trust-badge-text {
+     display: flex;
+     flex-direction: column;
+     gap: 0.1rem;
+ }
+
+ .trust-badge-main {
+     font-size: 0.8rem;
+     font-weight: 700;
+     color: var(--green-800);
+ }
+
+ .trust-badge-sub {
+     font-size: 0.7rem;
+     color: var(--text-muted);
+     font-weight: 500;
+ }
+
+ /* ===== UTILITY CLASSES ===== */
+ /* یک کلاس عمومی برای کانتینر تا در تمام سکشن‌ها استفاده کنیم و هم‌راستایی حفظ شود */
+ .container-standard {
+     width: 100%;
+     max-width: 1360px;
+     margin: 0 auto;
+     padding: 0 clamp(1.5rem, 5vw, 3rem);
+ }
+
+ /* ===== SERVICES SECTION ===== */
+    .services {
+      padding: 6rem 0;
+      background-color: var(--white);
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-eyebrow {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: var(--gold-light);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      color: #78350f;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+      font-weight: 800;
+      color: var(--green-800);
+    }
+
+    .services-grid {
+      display: grid;
+      /* تغییر سایز پایه به 320px تا در لپ‌تاپ دقیقاً ۳ ستون و ۲ ردیف (۶ آیتم) منظم تشکیل شود */
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    /* Hover-Lift Card Pattern */
+    .service-card {
+      background: var(--bg-dot);
+      border: 1px solid #e5e7eb;
+      border-radius: var(--radius-md);
+      padding: 2.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--green-600);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.4s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-card);
+      border-color: var(--green-100);
+      background: var(--white);
+    }
+
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .service-icon-box {
+      width: 56px;
+      height: 56px;
+      background: var(--green-50);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .service-card:hover .service-icon-box {
+      background: var(--green-100);
+      transform: scale(1.05) rotate(-5deg);
+    }
+
+    .service-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--green-800);
+    }
+
+    .service-desc {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--text-mid);
+      line-height: 1.8;
+      flex-grow: 1;
+    }
+
+    /* Action Button (Styled to look like a clean text link) */
+    .care-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--green-700);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      font-family: inherit;
+      margin-top: 1rem;
+      transition: gap 0.3s ease, color 0.3s ease;
+    }
+
+    .service-card:hover .care-btn {
+      gap: 0.75rem;
+      color: var(--green-600);
+    }
+
+    /* ===== MODAL (POP-UP) STYLES ===== */
+    #care-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      /* انیمیشن نرم برای باز شدن مودال */
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    #care-modal.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .modal-box {
+      background: var(--white);
+      width: 100%;
+      max-width: 500px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-img);
+      padding: 2rem;
+      position: relative;
+      transform: scale(1);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    #care-modal.hidden .modal-box {
+      transform: scale(0.9);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 1rem;
+    }
+
+    .modal-header h3 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--green-800);
+    }
+
+    #close-modal-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      line-height: 1;
+      padding: 0.2rem;
+      transition: color 0.2s;
+    }
+
+    #close-modal-btn:hover {
+      color: #ef4444; /* رنگ قرمز در هاور */
+    }
+
+    #modal-content {
+      color: var(--text-mid);
+      font-size: 0.95rem;
+      line-height: 2;
+    }
+
+    #modal-content ul li {
+      margin-bottom: 0.75rem;
+      position: relative;
+    }
+    
+    #modal-content ul li::marker {
+      color: var(--green-600);
+    }
+
+ /* ===== RESPONSIVE — MOBILE ===== */
+ @media (max-width: 992px) {
+     .hero-container {
+         gap: 3rem;
+     }
+ }
+
+ @media (max-width: 767px) {
+     .hero {
+         padding: 5rem 0 3rem;
+         min-height: auto;
+     }
+
+     .hero-container {
+         grid-template-columns: 1fr;
+         gap: 3rem;
+     }
+
+     .hero-image-col {
+         order: -1;
+     }
+
+     .hero-image-wrap {
+         max-width: 300px;
+         margin: 0 auto;
+     }
+
+     .trust-badge {
+         left: -10px;
+         bottom: 16px;
+     }
+
+     .hero-name {
+         font-size: 1.8rem;
+     }
+
+     .hero-stats {
+         gap: 1.25rem;
+     }
+
+     .discount-banner {
+         width: 100%;
+     }
+ }

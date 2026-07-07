@@ -1,0 +1,29 @@
+body {
+  font-family: "Vazirmatn", sans-serif;
+  scroll-behavior: smooth;
+}
+/* Background with Light Gray Dot Pattern */
+.dotted-bg {
+  background-color: #ffffff;
+  background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+  background-size: 15px 15px;
+}
+/* Hero Section Background Image */
+.hero-bg {
+  background-image: url("/Images/dental-veneer-icon-hero-section.svg");
+  background-repeat: no-repeat;
+  background-position: center 30%;
+  background-size: 80% auto;
+}
+/* Custom off-white color */
+.text-smoke-white {
+  color: #f5f5f5;
+}
+
+/* For bigger screens like tablets and desktops */
+@media (min-width: 768px) {
+  .hero-bg {
+    background-position: center center;
+    background-size: 60% auto;
+  }
+}
