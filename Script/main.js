@@ -108,4 +108,126 @@ document.addEventListener("DOMContentLoaded", function () {
       closeModal();
     }
   });
+
+
+  // ===== 1. DYNAMIC STAGGERED FADE-UP ANIMATION =====
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    let delayCounter = 0; // شمارنده برای ایجاد تاخیر آبشاری (Stagger) داینامیک
+
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // اعمال تاخیر بر اساس اینکه چندمین عنصری است که همزمان وارد کادر شده
+        entry.target.style.transitionDelay = `${delayCounter * 150}ms`;
+
+        // حذف کلاس‌های Tailwind برای اجرای انیمیشن
+        entry.target.classList.remove('translate-y-8', 'opacity-0');
+
+        // متوقف کردن مشاهده (انیمیشن فقط یک بار رخ دهد)
+        observer.unobserve(entry.target);
+        delayCounter++;
+      }
+    });
+  }, {
+    root: null,
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  });
+
+  // اعمال آبزرور به تمام المان‌های دارای کلاس reveal-item (کارت‌های خدمات و عکس‌های گالری)
+  document.querySelectorAll('.reveal-item').forEach(item => {
+    revealObserver.observe(item);
+  });
+
+
+  // ===== 2. LIGHTBOX MODAL LOGIC =====
+  // ===== LIGHTBOX MODAL LOGIC (With Layout Shift Fix) =====
+  const lightboxModal = document.getElementById('lightbox-modal');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxClose = document.getElementById('lightbox-close');
+  const galleryImages = document.querySelectorAll('.gallery-img');
+
+  // محاسبه عرض اسکرول‌بار سیستم عامل کاربر
+  const getScrollbarWidth = () => window.innerWidth - document.documentElement.clientWidth;
+
+  // باز کردن عکس
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxModal.classList.remove('hidden');
+
+      requestAnimationFrame(() => {
+        lightboxModal.classList.remove('opacity-0');
+        lightboxImg.classList.remove('scale-95');
+        lightboxImg.classList.add('scale-100');
+      });
+
+      // فیکس کردن پرش صفحه (Layout Shift)
+      document.body.style.paddingRight = `${getScrollbarWidth()}px`;
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  // تابع بستن
+  const closeLightbox = () => {
+    lightboxModal.classList.add('opacity-0');
+    lightboxImg.classList.remove('scale-100');
+    lightboxImg.classList.add('scale-95');
+
+    setTimeout(() => {
+      lightboxModal.classList.add('hidden');
+      lightboxImg.src = '';
+
+      // بازگرداندن تنظیمات صفحه به حالت اول
+      document.body.style.paddingRight = '0px';
+      document.body.style.overflow = '';
+    }, 300);
+  };
+
+  lightboxClose.addEventListener('click', closeLightbox);
+
+  lightboxModal.addEventListener('click', (e) => {
+    if (e.target === lightboxModal) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !lightboxModal.classList.contains('hidden')) {
+      closeLightbox();
+    }
+  });
+
+  // ===== 3. BACK TO TOP BUTTON LOGIC =====
+  const backToTopBtn = document.getElementById('back-to-top');
+
+  // مانیتور کردن اسکرول برای نمایش/مخفی کردن دکمه
+  window.addEventListener('scroll', () => {
+    // اگر کاربر بیش از ۵۰۰ پیکسل به پایین اسکرول کرد
+    if (window.scrollY > 500) {
+      backToTopBtn.classList.add('show');
+    } else {
+      backToTopBtn.classList.remove('show');
+    }
+  });
+
+  // اسکرول نرم به ابتدای صفحه هنگام کلیک
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  // ===== 4. DYNAMIC JALALI YEAR IN FOOTER =====
+  const yearSpan = document.getElementById('current-year');
+  if (yearSpan) {
+    const now = new Date();
+    // استفاده از API بومی مرورگر برای تبدیل مستقیم تاریخ میلادی به هجری شمسی (با فونت فارسی)
+    const formatter = new Intl.DateTimeFormat('fa-IR', {
+      calendar: 'persian',
+      year: 'numeric'
+    });
+    // خروجی به صورت "۱۴۰۳" (یا سال فعلی) چاپ می‌شود
+    yearSpan.textContent = formatter.format(now);
+  }
 });

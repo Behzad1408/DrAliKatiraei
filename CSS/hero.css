@@ -165,6 +165,7 @@
  .btn-primary {
      display: inline-flex;
      align-items: center;
+     justify-content: center;
      gap: 0.5rem;
      background: var(--green-800);
      color: var(--white);
@@ -177,13 +178,13 @@
      cursor: pointer;
      text-decoration: none;
      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-     box-shadow: 0 4px 14px rgba(22, 101, 52, 0.3);
+     box-shadow: 0 4px 14px rgba(22, 101, 52, 0.25);
  }
 
  .btn-primary:hover {
      background: var(--green-700);
      transform: translateY(-2px);
-     box-shadow: 0 6px 20px rgba(22, 101, 52, 0.4);
+     box-shadow: 0 6px 20px rgba(22, 101, 52, 0.35);
  }
 
  .btn-primary:active {
@@ -199,27 +200,88 @@
  /* discount banner */
  .discount-banner {
      display: inline-flex;
-     align-items: flex-start;
+     align-items: center;
      gap: 0.75rem;
-     background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
-     border: 1px solid var(--gold);
+     background: var(--green-50);
+     border: 1px solid var(--green-100);
      border-radius: var(--radius-md);
      padding: 0.875rem 1.25rem;
-     position: relative;
-     overflow: hidden;
      margin-top: 0.5rem;
-     box-shadow: 0 4px 12px rgba(184, 151, 42, 0.1);
+     position: relative;
+     /* اضافه شد برای انیمیشن */
+     overflow: hidden;
+     /* اضافه شد تا نور از کادر بیرون نزند */
+     transition: border-color 0.3s ease;
  }
 
+ .discount-banner:hover {
+     border-color: var(--green-600);
+ }
+
+ /* الگوی Premium Shimmer */
  .discount-banner::after {
      content: "";
      position: absolute;
      top: 0;
-     left: -100%;
-     width: 60%;
+     right: -100%;
+     /* شروع از بیرون کادر سمت راست */
+     width: 50%;
      height: 100%;
-     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
-     animation: shimmer 3s ease-in-out infinite;
+     background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+     transform: skewX(-25deg);
+     /* مورب کردن خط نور */
+     animation: discount-shimmer 3s infinite cubic-bezier(0.4, 0, 0.2, 1);
+     pointer-events: none;
+     /* جلوگیری از اختلال در کلیک */
+ }
+
+ @keyframes discount-shimmer {
+     0% {
+         right: -100%;
+     }
+
+     25% {
+         right: 150%;
+     }
+
+     /* نور به سرعت عبور می‌کند */
+     100% {
+         right: 150%;
+     }
+
+     /* توقف کوتاه قبل از شروع مجدد (برای جلوگیری از خستگی چشم) */
+ }
+
+ .discount-icon {
+     color: var(--green-600);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .discount-text {
+     display: flex;
+     flex-direction: column;
+     gap: 0.15rem;
+ }
+
+ .discount-label {
+     font-size: 0.75rem;
+     font-weight: 700;
+     color: var(--green-800);
+ }
+
+ .discount-main {
+     font-size: 0.9rem;
+     font-weight: 500;
+     color: var(--text-mid);
+     line-height: 1.6;
+ }
+
+ .discount-keyword {
+     font-weight: 700;
+     color: var(--green-700);
+     border-bottom: 1px dashed var(--green-600);
  }
 
  @keyframes shimmer {
@@ -588,26 +650,270 @@
      color: var(--green-600);
  }
 
+ /* ===== CONTACT SECTION (Bento Grid) ===== */
+ .contact-section {
+     padding: 6rem 0;
+     background-color: var(--white);
+     /* تغییر به سفید خالص برای تفکیک از گالری */
+     border-top: 1px solid #e5e7eb;
+     /* ایجاد یک مرز فیزیکی بسیار ظریف بین گالری و تماس */
+     position: relative;
+ }
+
+ .contact-grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 2.5rem;
+     align-items: stretch;
+ }
+
+ .contact-info-wrapper {
+     display: flex;
+     flex-direction: column;
+     gap: 1.5rem;
+ }
+
+ .contact-card {
+     background: var(--bg-dot);
+     border: 1px solid #e5e7eb;
+     border-radius: var(--radius-md);
+     padding: 1.75rem;
+     display: flex;
+     align-items: flex-start;
+     gap: 1.25rem;
+     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+ }
+
+ .contact-card:hover {
+     transform: translateY(-3px);
+     box-shadow: var(--shadow-card);
+     border-color: var(--green-100);
+ }
+
+ .contact-icon-wrapper {
+     width: 48px;
+     height: 48px;
+     background: var(--green-50);
+     border-radius: 12px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: var(--green-700);
+     flex-shrink: 0;
+     transition: background 0.3s ease, color 0.3s ease;
+ }
+
+ .contact-card:hover .contact-icon-wrapper {
+     background: var(--green-600);
+     color: var(--white);
+ }
+
+ .contact-card-content {
+     flex-grow: 1;
+ }
+
+ .contact-card-content h3 {
+     font-size: 1.05rem;
+     font-weight: 800;
+     color: var(--green-800);
+     margin-bottom: 0.75rem;
+ }
+
+ .contact-link {
+     display: inline-block;
+     color: var(--text-dark);
+     font-size: 1.15rem;
+     font-weight: 700;
+     text-decoration: none;
+     margin-bottom: 0.25rem;
+     transition: color 0.2s ease;
+     direction: ltr;
+ }
+
+ .contact-link:hover {
+     color: var(--green-600);
+ }
+
+ .contact-desc {
+     color: var(--text-muted);
+     font-size: 0.85rem;
+     line-height: 1.7;
+ }
+
+ .social-links {
+     display: flex;
+     gap: 1rem;
+     margin-top: 0.5rem;
+ }
+
+ .social-btn {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     width: 44px;
+     height: 44px;
+     border-radius: 12px;
+     background: var(--white);
+     color: var(--text-mid);
+     border: 1px solid #e5e7eb;
+     text-decoration: none;
+     transition: all 0.3s ease;
+ }
+
+ .social-btn:hover {
+     background: var(--green-50);
+     color: var(--green-700);
+     border-color: var(--green-200);
+     transform: translateY(-2px);
+ }
+
+ .map-container {
+     border-radius: var(--radius-md);
+     overflow: hidden;
+     height: 100%;
+     min-height: 400px;
+     box-shadow: var(--shadow-card);
+     position: relative;
+     border: 1px solid #e5e7eb;
+ }
+
+ .map-container iframe {
+     width: 100%;
+     height: 100%;
+     border: none;
+     filter: grayscale(100%) contrast(90%) opacity(0.85);
+     transition: filter 0.5s ease;
+ }
+
+ .map-container:hover iframe {
+     filter: grayscale(0%) contrast(100%) opacity(1);
+ }
+
+ /* ===== BACK TO TOP BUTTON ===== */
+ #back-to-top {
+     position: fixed;
+     bottom: 2rem;
+     right: 2rem;
+     z-index: 999;
+     width: 50px;
+     height: 50px;
+     background-color: var(--green-800);
+     color: var(--white);
+     border: none;
+     border-radius: 50%;
+     box-shadow: 0 4px 16px rgba(22, 101, 52, 0.4);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     opacity: 0;
+     visibility: hidden;
+     transform: translateY(20px);
+     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ }
+
+ #back-to-top.show {
+     opacity: 1;
+     visibility: visible;
+     transform: translateY(0);
+ }
+
+ #back-to-top:hover {
+     background-color: var(--green-600);
+     transform: translateY(-5px) scale(1.05);
+ }
+
+ /* ===== FOOTER ===== */
+ .site-footer a {
+     /* color: #86efac; */
+     /* سبز روشن‌تر برای لینک‌ها در بک‌گراند تیره */
+     text-decoration: none;
+     transition: color 0.2s ease;
+ }
+
+ .site-footer a:hover {
+     color: var(--white);
+ }
+
+ /*  .site-footer {
+     background-color: var(--green-900);
+     color: var(--white);
+     padding: 2rem 0;
+     text-align: center;
+     border-top: 4px solid var(--green-700);
+ }
+
+ .site-footer p {
+     font-size: 0.85rem;
+     opacity: 0.8;
+     font-weight: 400;
+     line-height: 1.8;
+ } */
+
+ /* ===== RESPONSIVE ===== */
+ @media (max-width: 992px) {
+     .contact-grid {
+         grid-template-columns: 1fr;
+     }
+
+     .map-container {
+         min-height: 350px;
+     }
+ }
+
+ @media (max-width: 767px) {
+     #back-to-top {
+         bottom: 6.5rem;
+         right: 1.25rem;
+         width: 44px;
+         height: 44px;
+         /* مقیاس دهی برای موبایل و حفظ موقعیت انیمیشن */
+         transform: scale(0.9) translateY(20px);
+     }
+
+     #back-to-top.show {
+         transform: scale(0.9) translateY(0);
+     }
+
+     site-footer {
+         padding-bottom: 4.5rem !important;
+     }
+
+     .site-footer p {
+         font-size: 0.75rem;
+         line-height: 2 !important;
+     }
+ }
+
  /* ===== RESPONSIVE — MOBILE ===== */
  @media (max-width: 992px) {
      .hero-container {
          gap: 3rem;
      }
+
+     .contact-grid {
+         grid-template-columns: 1fr;
+     }
+
+     .map-container {
+         min-height: 350px;
+     }
  }
 
  @media (max-width: 767px) {
-     .hero {
+     section.hero {
          padding: 5rem 0 3rem;
          min-height: auto;
      }
 
      .hero-container {
          grid-template-columns: 1fr;
-         gap: 3rem;
+         gap: 2.5rem;
      }
 
      .hero-image-col {
          order: -1;
+         justify-content: center;
      }
 
      .hero-image-wrap {
@@ -615,9 +921,22 @@
          margin: 0 auto;
      }
 
+     /*     .trust-badge {
+         left: 50%;
+         transform: translateX(50%);
+         bottom: 12px;
+         width: 90%;
+         justify-content: center;
+        
+     } */
      .trust-badge {
-         left: -10px;
-         bottom: 16px;
+         left: 0;
+         right: 0;
+         margin: 0 auto;
+         bottom: 12px;
+         width: 90%;
+         justify-content: center;
+         padding: 0.6rem 0.75rem;
      }
 
      .hero-name {
@@ -630,5 +949,20 @@
 
      .discount-banner {
          width: 100%;
+         align-items: flex-start;
+     }
+
+     .hero-cta {
+         flex-direction: column;
+         align-items: stretch;
+         gap: 0.75rem;
+     }
+
+     .btn-primary {
+         width: 100%;
+     }
+
+     .btn-phone-hint {
+         text-align: center;
      }
  }
