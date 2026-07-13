@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  // ===== 1. DYNAMIC STAGGERED FADE-UP ANIMATION =====
+  // ===== DYNAMIC STAGGERED FADE-UP ANIMATION =====
   const revealObserver = new IntersectionObserver((entries, observer) => {
     let delayCounter = 0; // شمارنده برای ایجاد تاخیر آبشاری (Stagger) داینامیک
 
@@ -139,8 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-  // ===== 2. LIGHTBOX MODAL LOGIC =====
-  // ===== LIGHTBOX MODAL LOGIC (With Layout Shift Fix) =====
+  // ===== LIGHTBOX MODAL LOGIC =====
   const lightboxModal = document.getElementById('lightbox-modal');
   const lightboxImg = document.getElementById('lightbox-img');
   const lightboxClose = document.getElementById('lightbox-close');
@@ -197,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // ===== 3. BACK TO TOP BUTTON LOGIC =====
+  // ===== BACK TO TOP BUTTON LOGIC =====
   const backToTopBtn = document.getElementById('back-to-top');
 
   // مانیتور کردن اسکرول برای نمایش/مخفی کردن دکمه
@@ -218,7 +217,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // ===== 4. DYNAMIC JALALI YEAR IN FOOTER =====
+  // ===== DYNAMIC JALALI YEAR IN FOOTER =====
   const yearSpan = document.getElementById('current-year');
   if (yearSpan) {
     const now = new Date();
