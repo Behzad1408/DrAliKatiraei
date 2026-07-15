@@ -1,29 +1,223 @@
+/* ===== PURE CUSTOM STYLES & ANIMATIONS ===== */
+
 body {
-  font-family: "Vazirmatn", sans-serif;
-  scroll-behavior: smooth;
-}
-/* Background with Light Gray Dot Pattern */
-.dotted-bg {
-  background-color: #ffffff;
-  background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
-  background-size: 15px 15px;
-}
-/* Hero Section Background Image */
-.hero-bg {
-  background-image: url("/Images/dental-veneer-icon-hero-section.svg");
-  background-repeat: no-repeat;
-  background-position: center 30%;
-  background-size: 80% auto;
-}
-/* Custom off-white color */
-.text-smoke-white {
-  color: #f5f5f5;
+    font-family: "Vazirmatn", sans-serif;
+    background-color: #f9fafb;
+    background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+    background-size: 15px 15px;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* For bigger screens like tablets and desktops */
-@media (min-width: 768px) {
-  .hero-bg {
-    background-position: center center;
-    background-size: 60% auto;
-  }
+/* ===== CTA BUTTON ANTI-JIGGLE ===== */
+.btn-cta {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform, box-shadow;
+    transform: translateZ(0);
+}
+
+.btn-cta:hover {
+    background-color: #15803d;
+    /* green-700 */
+    transform: translateY(-2px) translateZ(0);
+    box-shadow: 0 6px 20px rgba(22, 101, 52, 0.35);
+}
+
+/* Prevent SVG icon from jiggling during transition */
+.btn-cta svg {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+/* Background gradient effect for Hero Section */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    left: -120px;
+    width: 480px;
+    height: 480px;
+    background: radial-gradient(circle, rgba(22, 101, 52, 0.07) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Custom design for Hero image wrapping */
+.hero-image-wrap::before {
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    right: -16px;
+    width: 100%;
+    height: 100%;
+    background: #166534;
+    /* green-800 */
+    border-radius: 24px;
+    z-index: 0;
+    opacity: 0.12;
+}
+
+.hero-image-wrap::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #166534;
+    border-radius: 24px;
+    z-index: 0;
+    opacity: 0.25;
+}
+
+/* Premium Shimmer Pattern for Discount Banner */
+.discount-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-25deg);
+    animation: discount-shimmer 3s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+@keyframes discount-shimmer {
+    0% {
+        right: -100%;
+    }
+
+    25% {
+        right: 150%;
+    }
+
+    100% {
+        right: 150%;
+    }
+}
+
+/* Service Card Transitions & Effects */
+.service-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    background: #16a34a;
+    /* green-600 */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card:hover .service-icon-box {
+    background: #dcfce7;
+    /* green-100 */
+    transform: scale(1.05) rotate(-5deg);
+}
+
+/* Care Modal (Pop-up) custom styles */
+#care-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#care-modal.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal-box {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18);
+    padding: 2rem;
+    position: relative;
+    transform: scale(1);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#care-modal.hidden .modal-box {
+    transform: scale(0.9);
+}
+
+#modal-content ul li {
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+#modal-content ul li::marker {
+    color: #16a34a;
+}
+
+/* ===== BACK TO TOP BUTTON ===== */
+#back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    background-color: #166534;
+    /* var(--green-800) */
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(22, 101, 52, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#back-to-top:hover {
+    background-color: #16a34a;
+    /* var(--green-600) */
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* Responsive adjustment for Mobile */
+@media (max-width: 767px) {
+    #back-to-top {
+        bottom: 6.5rem;
+        /* Prevent overlap with mobile browser UI */
+        right: 1.25rem;
+        width: 44px;
+        height: 44px;
+    }
 }

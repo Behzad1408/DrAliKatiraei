@@ -13,11 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="stylesheet" href="CSS/hero.css">
-
     <link rel="icon" type="image/jpg" href="Images/favicon.jpg">
 
-    <!-- *** Open Graph - Start *** -->
     <meta property="og:title" content="دکتر علی کتیرایی در اصفهان | فلوشیپ زیبایی و ایمپلنت" />
     <meta property="og:description"
         content="مطب دندانپزشکی دکتر علی کتیرایی؛ ارائه‌دهنده خدمات ایمپلنت، لمینت و طراحی لبخند با مدرک فلوشیپ زیبایی از آلمان." />
@@ -25,18 +22,10 @@
     <meta property="og:url" content="https://www.dralikatiraei.ir" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fa_IR" />
-    <!-- *** Open Graph - End *** -->
-
-    <!-- *** Twitter Cards - Start *** -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="دکتر علی کتیرایی در اصفهان | فلوشیپ زیبایی و ایمپلنت">
     <meta name="twitter:description" content="ارائه خدمات تخصصی ایمپلنت، لمینت و طراحی لبخند در اصفهان.">
     <meta name="twitter:image" content="https://dralikatiraei.ir/Images/Dr-Ali-Katiraei.jpg">
-
-    <!-- *** Twitter Cards - End *** -->
-
-
-    <!-- *** JSON-LD Schema Markup for SEO *** -->
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -89,37 +78,23 @@
 }
 </script>
 
-
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FS502CVNSL"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-FS502CVNSL');
     </script>
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-[#f9fafb] text-gray-900 antialiased">
 
-    <!-- Header and Main Navigation-->
-    <!-- ===== NAVBAR ===== -->
     <header class="bg-green-800/90 backdrop-blur-sm sticky top-0 z-50 shadow-md">
-        <!-- 
-          جایگزینی container و px-6 با مقادیر دقیق Hero Section:
-          w-full max-w-[1360px] px-[clamp(1.5rem,5vw,3rem)] 
-        -->
         <nav class="w-full max-w-[1360px] mx-auto px-[clamp(1.5rem,5vw,3rem)] py-4 flex justify-between items-center">
-
             <div class="text-2xl font-bold text-white">
                 <a href="#">دکتر علی کتیرایی</a>
             </div>
-
             <div class="hidden md:flex items-center space-x-reverse space-x-6">
-                <!-- <a href="#about"
-                    class="px-4 py-2 text-gray-300 hover:text-white font-semibold transition-colors duration-300">درباره
-                    ما</a> -->
                 <a href="#services"
                     class="px-4 py-2 text-gray-300 hover:text-white font-semibold transition-colors duration-300">خدمات</a>
                 <a href="#gallery"
@@ -139,12 +114,7 @@
             </div>
         </nav>
 
-        <!-- Mobile Menu-->
         <div id="mobile-menu" class="absolute w-full bg-green-800 shadow-lg hidden md:hidden">
-            <!-- The 'text-smoke-white' class is not Tailwind standard; changed to 'text-gray-200' to prevent breakage. -->
-            <!-- <a href="#about"
-                class="block py-3 px-6 text-sm text-gray-200 hover:bg-green-700 hover:text-white transition-colors border-b border-green-700/50">درباره
-                ما</a> -->
             <a href="#services"
                 class="block py-3 px-6 text-sm text-gray-200 hover:bg-green-700 hover:text-white transition-colors border-b border-green-700/50">خدمات</a>
             <a href="#gallery"
@@ -155,39 +125,38 @@
         </div>
     </header>
 
-    <!-- Main Content Section-->
     <main>
-        <!-- Hero Section -->
-        <section class="hero" id="hero">
-            <div class="hero-container">
+        <section class="hero min-h-[75vh] flex items-center py-12 md:py-16 relative overflow-hidden" id="hero">
+            <div
+                class="w-full max-w-[1360px] mx-auto px-[clamp(1.5rem,5vw,3rem)] grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-12 md:gap-24 items-center">
 
-                <!-- RIGHT: content -->
-                <div class="hero-content">
-
-                    <!-- name block -->
+                <div class="flex flex-col gap-6">
                     <div>
-                        <p class="hero-eyebrow">دندانپزشک زیبایی و ایمپلنت</p>
-                        <h1 class="hero-name">دکتر علی کتیرایی</h1>
+                        <p class="text-[0.85rem] font-semibold tracking-wider text-green-700 uppercase mb-1">دندانپزشک
+                            زیبایی و ایمپلنت</p>
+                        <h1 class="text-[clamp(2rem,3.5vw,3rem)] font-extrabold text-green-800 leading-[1.2]">دکتر علی
+                            کتیرایی</h1>
                     </div>
 
-                    <!-- specialty bar -->
-                    <p class="hero-title">فلوشیپ زیبایی و ایمپلنت از آلمان</p>
+                    <p
+                        class="text-[clamp(1rem,1.5vw,1.2rem)] font-medium text-gray-700 border-r-[3px] border-green-600 pr-3 leading-relaxed">
+                        فلوشیپ زیبایی و ایمپلنت از آلمان</p>
 
-                    <!-- stats -->
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">۱۵+</span>
-                            <span class="stat-label">سال تجربه</span>
+                    <div class="flex gap-6 flex-wrap mt-2">
+                        <div class="flex flex-col gap-1">
+                            <span
+                                class="text-2xl font-extrabold text-green-800 leading-none flex items-center h-6">۱۵+</span>
+                            <span class="text-xs font-medium text-gray-500">سال تجربه</span>
                         </div>
-                        <div class="stat-divider"></div>
-                        <div class="stat-item">
-                            <span class="stat-number">+۱۰۰۰</span>
-                            <span class="stat-label">بیمار راضی</span>
+                        <div class="w-px bg-gray-300 self-stretch"></div>
+                        <div class="flex flex-col gap-1">
+                            <span
+                                class="text-2xl font-extrabold text-green-800 leading-none flex items-center h-6">+۱۰۰۰</span>
+                            <span class="text-xs font-medium text-gray-500">بیمار راضی</span>
                         </div>
-                        <div class="stat-divider"></div>
-                        <div class="stat-item">
-                            <!-- Replaced emoji with pure SVG for correct and beautiful rendering across all devices -->
-                            <span class="stat-number">
+                        <div class="w-px bg-gray-300 self-stretch"></div>
+                        <div class="flex flex-col gap-1">
+                            <span class="text-2xl font-extrabold text-green-800 leading-none flex items-center h-6">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3" width="28" height="20"
                                     style="border-radius: 3px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                                     <rect width="5" height="3" y="0" x="0" fill="#000" />
@@ -195,38 +164,36 @@
                                     <rect width="5" height="1" y="2" x="0" fill="#FFCE00" />
                                 </svg>
                             </span>
-                            <span class="stat-label">فلوشیپ آلمان</span>
+                            <span class="text-xs font-medium text-gray-500">فلوشیپ آلمان</span>
                         </div>
                     </div>
 
-                    <!-- bio -->
-                    <p class="hero-bio">
+                    <p class="text-[0.95rem] font-normal text-gray-700 leading-[1.9] border-t border-gray-200 pt-5">
                         دکتر کتیرایی با بیش از ۱۵ سال سابقه درخشان در زمینه دندانپزشکی، فارغ‌التحصیل از دانشگاه اصفهان و
-                        دارای فلوشیپ
-                        زیبایی و ایمپلنت از کشور آلمان می‌باشد. ایشان با بهره‌گیری از دانش روز دنیا و بهترین متریال،
-                        همواره در تلاش
-                        است تا لبخندی زیبا و سالم را به بیماران خود هدیه دهد. تعهد به کیفیت و رضایت بیمار، اولویت اصلی
-                        دکتر کتیرایی در
-                        تمام مراحل درمان است.
+                        دارای فلوشیپ زیبایی و ایمپلنت از کشور آلمان می‌باشد. ایشان با بهره‌گیری از دانش روز دنیا و
+                        بهترین متریال،
+                        همواره در تلاش است تا لبخندی زیبا و سالم را به بیماران خود هدیه دهد. تعهد به کیفیت و رضایت
+                        بیمار، اولویت اصلی
+                        دکتر کتیرایی در تمام مراحل درمان است.
                     </p>
 
-                    <!-- CTA -->
-                    <div class="hero-cta">
-                        <a href="tel:+98 903 716 1001" class="btn-primary">
+                    <div class="flex items-center gap-4 flex-wrap mt-2">
+                        <a href="tel:+98 903 716 1001"
+                            class="btn-cta bg-green-800 text-white font-bold text-[0.95rem] py-3.5 px-8 rounded-lg flex items-center justify-center gap-2 no-underline shadow-[0_4px_14px_rgba(22,101,52,0.25)]">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0">
                                 <path
                                     d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
                                 </path>
                             </svg>
                             تماس و دریافت نوبت
                         </a>
-                        <span class="btn-phone-hint">پاسخگو: شنبه تا چهارشنبه</span>
+                        <span class="text-[0.8rem] text-gray-500 font-medium">پاسخگو: شنبه تا چهارشنبه</span>
                     </div>
 
-                    <!-- discount banner -->
-                    <div class="discount-banner">
-                        <div class="discount-icon">
+                    <div
+                        class="discount-banner inline-flex items-center gap-3 bg-green-50 border border-green-600 rounded-2xl py-3.5 px-5 mt-2 relative overflow-hidden transition-colors duration-300">
+                        <div class="text-green-600 flex items-center justify-center text-2xl shrink-0 mt-[2px]">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path
@@ -235,34 +202,35 @@
                                 <line x1="7" y1="7" x2="7.01" y2="7"></line>
                             </svg>
                         </div>
-                        <div class="discount-text">
-                            <span class="discount-label">ویژه مراجعین سایت</span>
-                            <p class="discount-main">
-                                کافیست موقع تماس بگویید شماره را از<span class="discount-keyword">وب‌سایت</span>برداشتید
-                                تا تخفیف ویژه شامل حالتان شود.
+                        <div class="flex flex-col gap-1">
+                            <span class="text-xs font-bold tracking-wider text-green-800">تخفیف ویژه مراجعین سایت</span>
+                            <p class="text-[0.95rem] font-semibold text-gray-700 leading-normal">
+                                هنگام تماس بگویید<span
+                                    class="inline-block bg-green-800 text-white text-[0.8rem] font-bold py-0.5 px-2.5 rounded mx-1">
+                                    از وب‌سایت مراجعه کرده‌ام </span>تا تخفیف ویژه شامل حال شما شود.
                             </p>
                         </div>
                     </div>
-
                 </div>
 
-                <!-- LEFT: image -->
-                <div class="hero-image-col">
-                    <div class="hero-image-wrap">
+                <div class="flex justify-center md:justify-end items-center order-first md:order-last w-full">
+                    <div class="hero-image-wrap relative w-full max-w-[420px] max-md:max-w-[300px] max-md:mx-auto">
                         <img src="Images/Dr-Ali-Katiraei.jpg" alt="دکتر علی کتیرایی — دندانپزشک زیبایی و ایمپلنت"
-                            class="hero-img" loading="eager" />
-                        <!-- floating trust badge -->
-                        <div class="trust-badge">
-                            <span class="trust-badge-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green-700)"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            class="w-full h-auto block rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.18)] relative z-10 object-cover"
+                            loading="eager" />
+                        <div
+                            class="absolute bottom-8 -left-6 md:bottom-8 md:-left-6 bg-white rounded-2xl py-3 px-4 flex items-center gap-3 shadow-[0_4px_24px_rgba(0,0,0,0.08)] z-20 border border-green-100 md:w-auto md:justify-start md:mx-0 max-md:left-0 max-md:right-0 max-md:mx-auto max-md:bottom-3 max-md:w-[90%] max-md:justify-center max-md:py-2.5 max-md:px-3">
+                            <span class="text-xl">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    class="text-green-700">
                                     <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
                                     <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
                                 </svg>
                             </span>
-                            <div class="trust-badge-text">
-                                <span class="trust-badge-main">فارغ‌التحصیل دانشگاه اصفهان</span>
-                                <span class="trust-badge-sub">فلوشیپ از آلمان</span>
+                            <div class="flex flex-col gap-0.5">
+                                <span class="text-[0.8rem] font-bold text-green-800">فارغ‌التحصیل دانشگاه اصفهان</span>
+                                <span class="text-[0.7rem] text-gray-500 font-medium">فلوشیپ از آلمان</span>
                             </div>
                         </div>
                     </div>
@@ -272,37 +240,39 @@
         </section>
 
 
-        <!-- Services Section-->
-        <!-- ===== SERVICES SECTION ===== -->
-        <section class="services" id="services">
-            <div class="container-standard">
+        <section class="py-24 bg-white relative" id="services">
+            <div class="w-full max-w-[1360px] mx-auto px-[clamp(1.5rem,5vw,3rem)]">
 
-                <!-- Section Header -->
-                <div class="section-header">
-                    <span class="section-eyebrow">خدمات کلینیک</span>
-                    <h2 class="section-title">لبخندی که شایسته آن هستید</h2>
+                <div class="text-center mb-16 flex flex-col items-center gap-2">
+                    <span
+                        class="text-[0.85rem] font-extrabold text-green-700 bg-green-100 px-4 py-1.5 rounded-full mb-3">خدمات
+                        کلینیک</span>
+                    <h2 class="text-[clamp(1.75rem,3vw,2.25rem)] font-extrabold text-green-800">لبخندی که شایسته آن
+                        هستید</h2>
                 </div>
 
-                <!-- Services Grid (6 Items) -->
-                <div class="services-grid">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                    <!-- 1. Laminate & Composite Veneers -->
-                    <div class="service-card reveal-item translate-y-8 opacity-0 transition-all duration-700 ease-out">
-                        <div class="service-icon-box">
-                            <!-- Cosmetic & Laminate Icon (Tooth with a smile line and sparkle) -->
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green-700)"
-                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <div
+                        class="service-card reveal-item bg-[#f9fafb] border border-gray-200 rounded-2xl p-8 relative overflow-hidden flex flex-col gap-4 translate-y-8 opacity-0 transition-all duration-700 ease-out">
+                        <div
+                            class="service-icon-box w-14 h-14 bg-green-50 rounded-lg flex items-center justify-center mb-2 transition-all duration-300">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                class="text-green-700">
                                 <path
                                     d="M15 3c2.2 0 4 1.8 4 4 0 2.5-1.5 4.5-2.5 7l-1.6 5c-.2.7-1.2.7-1.4 0L12 16l-1.5 3c-.2.7-1.2.7-1.4 0l-1.6-5C6.5 11.5 5 9.5 5 7c0-2.2 1.8-4 4-4 1.5 0 2.8.8 3.5 2 .7-1.2 2-2 3.5-2z" />
                                 <path d="M8 10c2.5 2 5.5 2 8 0" />
                                 <path d="M19 2l.5 1.5L21 4l-1.5.5L19 6l-.5-1.5L17 4l1.5-.5z" />
                             </svg>
                         </div>
-                        <h3 class="service-title">لمینت و کامپوزیت</h3>
-                        <p class="service-desc">
+                        <h3 class="text-xl font-bold text-green-800">لمینت و کامپوزیت</h3>
+                        <p class="text-[0.9rem] font-normal text-gray-700 leading-relaxed grow">
                             طراحی لبخند و اصلاح فرم و رنگ دندان‌ها برای زیبایی بی‌نظیر.
                         </p>
-                        <button class="care-btn" data-service="لمینت و کامپوزیت">
+                        <button
+                            class="care-btn inline-flex items-center gap-2 text-[0.85rem] font-bold text-green-700 bg-transparent border-none cursor-pointer p-0 mt-4 transition-all duration-300"
+                            data-service="لمینت و کامپوزیت">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -317,12 +287,13 @@
                         </button>
                     </div>
 
-                    <!-- 2. Dental Implants -->
-                    <div class="service-card reveal-item translate-y-8 opacity-0 transition-all duration-700 ease-out">
-                        <div class="service-icon-box">
-                            <!-- Implant Icon (Tooth crown + fixture base) -->
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green-700)"
-                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <div
+                        class="service-card reveal-item bg-[#f9fafb] border border-gray-200 rounded-2xl p-8 relative overflow-hidden flex flex-col gap-4 translate-y-8 opacity-0 transition-all duration-700 ease-out">
+                        <div
+                            class="service-icon-box w-14 h-14 bg-green-50 rounded-lg flex items-center justify-center mb-2 transition-all duration-300">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                class="text-green-700">
                                 <path
                                     d="M15 3c2.2 0 4 1.8 4 4 0 2-1 3.5-2 5H7c-1-1.5-2-3-2-5 0-2.2 1.8-4 4-4 1.5 0 2.8.8 3.5 2 .7-1.2 2-2 3.5-2z" />
                                 <path d="M9 12v7c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2v-7" />
@@ -330,11 +301,13 @@
                                 <line x1="9" y1="18" x2="15" y2="18" />
                             </svg>
                         </div>
-                        <h3 class="service-title">ایمپلنت و کاشت دندان</h3>
-                        <p class="service-desc">
+                        <h3 class="text-xl font-bold text-green-800">ایمپلنت و کاشت دندان</h3>
+                        <p class="text-[0.9rem] font-normal text-gray-700 leading-relaxed grow">
                             جایگزینی دندان‌های از دست رفته با بهترین برندهای ایمپلنت روز دنیا.
                         </p>
-                        <button class="care-btn" data-service="ایمپلنت و کاشت دندان">
+                        <button
+                            class="care-btn inline-flex items-center gap-2 text-[0.85rem] font-bold text-green-700 bg-transparent border-none cursor-pointer p-0 mt-4 transition-all duration-300"
+                            data-service="ایمپلنت و کاشت دندان">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -349,12 +322,13 @@
                         </button>
                     </div>
 
-                    <!-- 3. Root Canal Treatment -->
-                    <div class="service-card reveal-item translate-y-8 opacity-0 transition-all duration-700 ease-out">
-                        <div class="service-icon-box">
-                            <!-- Root Canal Icon (Tooth with root canal pathway) -->
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green-700)"
-                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <div
+                        class="service-card reveal-item bg-[#f9fafb] border border-gray-200 rounded-2xl p-8 relative overflow-hidden flex flex-col gap-4 translate-y-8 opacity-0 transition-all duration-700 ease-out">
+                        <div
+                            class="service-icon-box w-14 h-14 bg-green-50 rounded-lg flex items-center justify-center mb-2 transition-all duration-300">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                class="text-green-700">
                                 <path
                                     d="M15 3c2.2 0 4 1.8 4 4 0 2.5-1.5 4.5-2.5 7l-1.6 5c-.2.7-1.2.7-1.4 0L12 16l-1.5 3c-.2.7-1.2.7-1.4 0l-1.6-5C6.5 11.5 5 9.5 5 7c0-2.2 1.8-4 4-4 1.5 0 2.8.8 3.5 2 .7-1.2 2-2 3.5-2z" />
                                 <path d="M12 7v4" />
@@ -362,11 +336,13 @@
                                 <path d="M12 11c1 1 1.5 2.5 1.5 4v1" />
                             </svg>
                         </div>
-                        <h3 class="service-title">عصب‌کشی (درمان ریشه)</h3>
-                        <p class="service-desc">
+                        <h3 class="text-xl font-bold text-green-800">عصب‌کشی (درمان ریشه)</h3>
+                        <p class="text-[0.9rem] font-normal text-gray-700 leading-relaxed grow">
                             درمان ریشه دندان با دستگاه‌های پیشرفته و بدون درد.
                         </p>
-                        <button class="care-btn" data-service="عصب کشی دندان">
+                        <button
+                            class="care-btn inline-flex items-center gap-2 text-[0.85rem] font-bold text-green-700 bg-transparent border-none cursor-pointer p-0 mt-4 transition-all duration-300"
+                            data-service="عصب کشی دندان">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -381,22 +357,25 @@
                         </button>
                     </div>
 
-                    <!-- 4. Wisdom Tooth Surgery -->
-                    <div class="service-card reveal-item translate-y-8 opacity-0 transition-all duration-700 ease-out">
-                        <div class="service-icon-box">
-                            <!-- Surgery Icon (Tooth + upward extraction arrow) -->
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green-700)"
-                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <div
+                        class="service-card reveal-item bg-[#f9fafb] border border-gray-200 rounded-2xl p-8 relative overflow-hidden flex flex-col gap-4 translate-y-8 opacity-0 transition-all duration-700 ease-out">
+                        <div
+                            class="service-icon-box w-14 h-14 bg-green-50 rounded-lg flex items-center justify-center mb-2 transition-all duration-300">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                class="text-green-700">
                                 <path
                                     d="M13 3c2.2 0 4 1.8 4 4 0 2.5-1.5 4.5-2.5 7l-1.6 5c-.2.7-1.2.7-1.4 0L10 16l-1.5 3c-.2.7-1.2.7-1.4 0l-1.6-5C4.5 11.5 3 9.5 3 7c0-2.2 1.8-4 4-4 1.5 0 2.8.8 3.5 2 .7-1.2 2-2 3.5-2z" />
                                 <path d="M21 14V6m0 0l-3 3m3-3l3 3" />
                             </svg>
                         </div>
-                        <h3 class="service-title">جراحی دندان عقل</h3>
-                        <p class="service-desc">
+                        <h3 class="text-xl font-bold text-green-800">جراحی دندان عقل</h3>
+                        <p class="text-[0.9rem] font-normal text-gray-700 leading-relaxed grow">
                             جراحی تخصصی دندان‌های عقل نهفته و نیمه‌نهفته.
                         </p>
-                        <button class="care-btn" data-service="جراحی دندان عقل">
+                        <button
+                            class="care-btn inline-flex items-center gap-2 text-[0.85rem] font-bold text-green-700 bg-transparent border-none cursor-pointer p-0 mt-4 transition-all duration-300"
+                            data-service="جراحی دندان عقل">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -411,22 +390,25 @@
                         </button>
                     </div>
 
-                    <!-- 5. Scaling & Filling -->
-                    <div class="service-card reveal-item translate-y-8 opacity-0 transition-all duration-700 ease-out">
-                        <div class="service-icon-box">
-                            <!-- Restoration Icon (Tooth with a checkmark indicating health and cleanup) -->
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green-700)"
-                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <div
+                        class="service-card reveal-item bg-[#f9fafb] border border-gray-200 rounded-2xl p-8 relative overflow-hidden flex flex-col gap-4 translate-y-8 opacity-0 transition-all duration-700 ease-out">
+                        <div
+                            class="service-icon-box w-14 h-14 bg-green-50 rounded-lg flex items-center justify-center mb-2 transition-all duration-300">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                class="text-green-700">
                                 <path
                                     d="M15 3c2.2 0 4 1.8 4 4 0 2.5-1.5 4.5-2.5 7l-1.6 5c-.2.7-1.2.7-1.4 0L12 16l-1.5 3c-.2.7-1.2.7-1.4 0l-1.6-5C6.5 11.5 5 9.5 5 7c0-2.2 1.8-4 4-4 1.5 0 2.8.8 3.5 2 .7-1.2 2-2 3.5-2z" />
                                 <path d="M9 10l2 2 4-4" />
                             </svg>
                         </div>
-                        <h3 class="service-title">جرم‌گیری و پر کردن</h3>
-                        <p class="service-desc">
+                        <h3 class="text-xl font-bold text-green-800">جرم‌گیری و پر کردن</h3>
+                        <p class="text-[0.9rem] font-normal text-gray-700 leading-relaxed grow">
                             حفظ سلامت لثه و ترمیم دندان‌های پوسیده با مواد با کیفیت.
                         </p>
-                        <button class="care-btn" data-service="جرم گیری و پر کردن دندان">
+                        <button
+                            class="care-btn inline-flex items-center gap-2 text-[0.85rem] font-bold text-green-700 bg-transparent border-none cursor-pointer p-0 mt-4 transition-all duration-300"
+                            data-service="جرم گیری و پر کردن دندان">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -441,12 +423,13 @@
                         </button>
                     </div>
 
-                    <!-- 6. Bleaching & Teeth Whitening -->
-                    <div class="service-card reveal-item translate-y-8 opacity-0 transition-all duration-700 ease-out">
-                        <div class="service-icon-box">
-                            <!-- Bleaching Icon (Tooth with glowing light rays) -->
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green-700)"
-                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <div
+                        class="service-card reveal-item bg-[#f9fafb] border border-gray-200 rounded-2xl p-8 relative overflow-hidden flex flex-col gap-4 translate-y-8 opacity-0 transition-all duration-700 ease-out">
+                        <div
+                            class="service-icon-box w-14 h-14 bg-green-50 rounded-lg flex items-center justify-center mb-2 transition-all duration-300">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                class="text-green-700">
                                 <path
                                     d="M15 5c2.2 0 4 1.8 4 4 0 2.5-1.5 4.5-2.5 7l-1.6 5c-.2.7-1.2.7-1.4 0L12 18l-1.5 3c-.2.7-1.2.7-1.4 0l-1.6-5C6.5 13.5 5 11.5 5 9c0-2.2 1.8-4 4-4 1.5 0 2.8.8 3.5 2 .7-1.2 2-2 3.5-2z" />
                                 <line x1="12" y1="1" x2="12" y2="3" />
@@ -456,11 +439,13 @@
                                 <line x1="3" y1="8" x2="5" y2="8" />
                             </svg>
                         </div>
-                        <h3 class="service-title">بلیچینگ و سفید کردن</h3>
-                        <p class="service-desc">
+                        <h3 class="text-xl font-bold text-green-800">بلیچینگ و سفید کردن</h3>
+                        <p class="text-[0.9rem] font-normal text-gray-700 leading-relaxed grow">
                             روشی موثر برای داشتن دندان‌هایی سفیدتر و درخشان‌تر.
                         </p>
-                        <button class="care-btn" data-service="بلیچینگ و سفید کردن دندان">
+                        <button
+                            class="care-btn inline-flex items-center gap-2 text-[0.85rem] font-bold text-green-700 bg-transparent border-none cursor-pointer p-0 mt-4 transition-all duration-300"
+                            data-service="بلیچینگ و سفید کردن دندان">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -479,35 +464,30 @@
             </div>
         </section>
 
-        <!-- ===== MODAL STRUCTURE ===== -->
         <div id="care-modal" class="hidden">
             <div class="modal-box">
-                <div class="modal-header">
-                    <h3 id="modal-title">مراقبت‌های پس از درمان</h3>
-                    <button id="close-modal-btn" aria-label="بستن">&times;</button>
+                <div class="flex justify-between items-center mb-6 border-b border-gray-200 pb-4">
+                    <h3 id="modal-title" class="text-xl font-extrabold text-green-800">مراقبت‌های پس از درمان</h3>
+                    <button id="close-modal-btn"
+                        class="bg-transparent border-none text-2xl text-gray-500 cursor-pointer p-1 transition-colors duration-200 hover:text-red-500"
+                        aria-label="بستن">×</button>
                 </div>
-                <div id="modal-content">
-                    <!-- JavaScript content is injected here -->
+                <div id="modal-content" class="text-gray-700 text-[0.95rem] leading-loose">
                 </div>
             </div>
         </div>
 
-        <!-- Gallery Section-->
         <section id="gallery" class="py-20 bg-gray-50/50">
-            <!-- از عرض کانتینر مشابه نوبار و هیرو استفاده کردیم تا یکپارچگی گرید حفظ شود -->
             <div class="w-full max-w-[1360px] mx-auto px-[clamp(1.5rem,5vw,3rem)] text-center">
 
                 <div class="section-header mb-12 flex flex-col align-center items-center justify-center">
-                    <span
-                        class="text-sm font-bold text-yellow-700 bg-yellow-100 px-3 py-1 rounded-full uppercase tracking-wider mb-2">نمونه
+                    <span <span
+                        class="text-[0.85rem] font-extrabold text-green-700 bg-green-100 px-4 py-1.5 rounded-full mb-3">نمونه
                         کارها</span>
                     <h2 class="text-3xl md:text-4xl font-extrabold text-green-900">گالری لبخندهای ماندگار</h2>
                 </div>
 
-                <!-- ساختار گرید دقیقاً طبق نظر شما چیده شده است -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-
-                    <!-- ستون ۱ -->
                     <div class="grid gap-4">
                         <div class="reveal-item translate-y-8 opacity-0 transition-all duration-700 ease-out">
                             <img class="gallery-img h-auto max-w-full rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer object-cover"
@@ -520,7 +500,6 @@
                         </div>
                     </div>
 
-                    <!-- ستون ۲ -->
                     <div class="grid gap-4">
                         <div class="reveal-item translate-y-8 opacity-0 transition-all duration-700 ease-out">
                             <img class="gallery-img h-auto max-w-full rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer object-cover"
@@ -534,7 +513,6 @@
                         </div>
                     </div>
 
-                    <!-- ستون ۳ -->
                     <div class="grid gap-4">
                         <div class="reveal-item translate-y-8 opacity-0 transition-all duration-700 ease-out">
                             <img class="gallery-img h-auto max-w-full rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer object-cover"
@@ -547,7 +525,6 @@
                         </div>
                     </div>
 
-                    <!-- ستون ۴ -->
                     <div class="grid gap-4">
                         <div class="reveal-item translate-y-8 opacity-0 transition-all duration-700 ease-out">
                             <img class="gallery-img h-auto max-w-full rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer object-cover"
@@ -560,39 +537,38 @@
                                 alt="نمونه کار قبل و بعد ایمپلنت دندان شماره دو">
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- ===== LIGHTBOX MODAL ===== -->
         <div id="lightbox-modal"
             class="fixed inset-0 z-[2000] bg-black/80 backdrop-blur-sm hidden flex items-center justify-center opacity-0 transition-opacity duration-300">
             <button id="lightbox-close"
-                class="absolute top-6 right-6 text-white text-4xl leading-none hover:text-green-400 transition-colors cursor-pointer focus:outline-none">&times;</button>
-            <!-- کانتینر عکس برای جلوگیری از دفرمه شدن در موبایل و دسکتاپ -->
+                class="absolute top-6 right-6 text-white text-4xl leading-none hover:text-green-400 transition-colors cursor-pointer focus:outline-none">×</button>
             <div class="relative max-w-[90vw] max-h-[90vh]">
                 <img id="lightbox-img" src=""
                     class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl transform scale-95 transition-transform duration-300">
             </div>
         </div>
 
-
         <section id="contact"
-            class="contact-section reveal-item translate-y-8 opacity-0 transition-all duration-700 ease-out">
+            class="py-24 bg-white border-t border-gray-200 relative reveal-item translate-y-8 opacity-0 transition-all duration-700 ease-out">
             <div class="w-full max-w-[1360px] mx-auto px-[clamp(1.5rem,5vw,3rem)]">
 
-                <div class="section-header">
-                    <span class="section-eyebrow">ارتباط با ما</span>
-                    <h2 class="section-title">مشاوره و رزرو نوبت</h2>
+                <div class="text-center mb-16 flex flex-col items-center gap-2">
+                    <span <span
+                        class="text-[0.85rem] font-extrabold text-green-700 bg-green-100 px-4 py-1.5 rounded-full mb-3">ارتباط
+                        با ما</span>
+                    <h2 class="text-[clamp(1.75rem,3vw,2.25rem)] font-extrabold text-green-800">مشاوره و رزرو نوبت</h2>
                 </div>
 
-                <div class="contact-grid">
-                    <!-- Cards -->
-                    <div class="contact-info-wrapper">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
+                    <div class="flex flex-col gap-6">
 
-                        <div class="contact-card">
-                            <div class="contact-icon-wrapper">
+                        <div
+                            class="group bg-[#f9fafb] border border-gray-200 rounded-2xl p-7 flex items-start gap-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] hover:border-green-100">
+                            <div
+                                class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center text-green-700 shrink-0 transition-all duration-300 group-hover:bg-green-600 group-hover:text-white">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path
@@ -600,46 +576,56 @@
                                     </path>
                                 </svg>
                             </div>
-                            <div class="contact-card-content">
-                                <h3>تلفن‌های تماس</h3>
-                                <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
-                                    <a href="tel:+989037161001" class="contact-link">+98 903 716 1001</a>
-                                    <a href="tel:03136633704" class="contact-link">031-36633704</a>
+                            <div class="grow">
+                                <h3 class="text-[1.05rem] font-extrabold text-green-800 mb-3">تلفن‌های تماس</h3>
+                                <div class="flex gap-6 flex-wrap">
+                                    <a href="tel:+989037161001"
+                                        class="inline-block text-gray-900 text-lg font-bold no-underline mb-1 transition-colors duration-200 hover:text-green-600 [direction:ltr]">+98
+                                        903 716 1001</a>
+                                    <a href="tel:03136633704"
+                                        class="inline-block text-gray-900 text-lg font-bold no-underline mb-1 transition-colors duration-200 hover:text-green-600 [direction:ltr]">031
+                                        36633704</a>
                                 </div>
-                                <p class="contact-desc mt-2">ساعات پذیرش: شنبه تا چهارشنبه، ۱۷ الی ۲۱</p>
+                                <p class="text-gray-500 text-[0.85rem] leading-relaxed mt-2">ساعات پذیرش: شنبه تا
+                                    چهارشنبه، ۱۷ الی ۲۱</p>
                             </div>
                         </div>
 
-                        <div class="contact-card">
-                            <div class="contact-icon-wrapper">
+                        <div
+                            class="group bg-[#f9fafb] border border-gray-200 rounded-2xl p-7 flex items-start gap-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] hover:border-green-100">
+                            <div
+                                class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center text-green-700 shrink-0 transition-all duration-300 group-hover:bg-green-600 group-hover:text-white">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                     <circle cx="12" cy="10" r="3"></circle>
                                 </svg>
                             </div>
-                            <div class="contact-card-content">
-                                <h3>مراجعه حضوری</h3>
-                                <p class="contact-desc">
+                            <div class="grow">
+                                <h3 class="text-[1.05rem] font-extrabold text-green-800 mb-3">مراجعه حضوری</h3>
+                                <p class="text-gray-500 text-[0.85rem] leading-relaxed">
                                     اصفهان، خیابان شیخ مفید شرقی، مقابل کلینیک دانشگاه، ساختمان مارال
                                 </p>
                             </div>
                         </div>
 
-                        <div class="contact-card">
-                            <div class="contact-icon-wrapper">
+                        <div
+                            class="group bg-[#f9fafb] border border-gray-200 rounded-2xl p-7 flex items-start gap-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_4px_24px_rgba(0,0,0,0.08)] hover:border-green-100">
+                            <div
+                                class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center text-green-700 shrink-0 transition-all duration-300 group-hover:bg-green-600 group-hover:text-white">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
                                     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
                                 </svg>
                             </div>
-                            <div class="contact-card-content">
-                                <h3>ارتباط آنلاین</h3>
-                                <p class="contact-desc">برای مشاهده نمونه کارهای بیشتر ما را دنبال کنید.</p>
-                                <div class="social-links">
+                            <div class="grow">
+                                <h3 class="text-[1.05rem] font-extrabold text-green-800 mb-3">ارتباط آنلاین</h3>
+                                <p class="text-gray-500 text-[0.85rem] leading-relaxed mb-3">برای مشاهده نمونه کارهای
+                                    بیشتر ما را دنبال کنید.</p>
+                                <div class="flex gap-4">
                                     <a href="https://instagram.com/katiraeiiali" target="_blank" aria-label="Instagram"
-                                        class="social-btn">
+                                        class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-white text-gray-700 border border-gray-200 no-underline transition-all duration-300 hover:bg-green-50 hover:text-green-700 hover:border-green-200 hover:-translate-y-0.5">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                                             stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                             stroke-linejoin="round">
@@ -649,9 +635,8 @@
                                         </svg>
                                     </a>
 
-                                    <!-- Official WhatsApp Icon SVG -->
                                     <a href="https://wa.me/989037161001" target="_blank" aria-label="WhatsApp"
-                                        class="social-btn">
+                                        class="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-white text-gray-700 border border-gray-200 no-underline transition-all duration-300 hover:bg-green-50 hover:text-green-700 hover:border-green-200 hover:-translate-y-0.5">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                             <path
                                                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
@@ -663,11 +648,12 @@
 
                     </div>
 
-                    <!-- Map -->
-                    <div class="map-container">
+                    <div
+                        class="rounded-2xl overflow-hidden h-full min-h-[400px] shadow-[0_4px_24px_rgba(0,0,0,0.08)] relative border border-gray-200">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d460.8763794957269!2d51.679389620239256!3d32.63083988590424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fbc376c3673f123%3A0xd746f74129fc4d13!2z2K_Zhtiv2KfZhtm-2LLYtNqpINiv2qnYqtixINi52YTbjCDaqdiq24zYsdin24zbjCB8IERyLiBBbGkgS2F0aXJhZWk!5e1!3m2!1sen!2sus!4v1752950393323!5m2!1sen!2sus"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            class="w-full h-full border-none" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
                 </div>
@@ -675,18 +661,15 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer bg-gray-800 text-white py-6">
         <div class="container mx-auto px-6 text-center">
-            <p class="text-xs md:text-base">&copy; <span id="current-year"></span> - کلیه حقوق مادی و معنوی وب‌سایت برای
+            <p class="text-xs md:text-base">© <span id="current-year"></span> - کلیه حقوق مادی و معنوی وب‌سایت برای
                 <span style="color: #16a34a;">دندانپزشک دکتر علی کتیرایی</span> محفوظ است. | <a
-                    href="http://behzadvaliani.ir" target="_blank" rel="noopener noreferrer">Made with &#x2665;&#xfe0f;
-                    BEHZAD</a>
+                    href="http://behzadvaliani.ir" target="_blank" rel="noopener noreferrer">Made with ♥️ BEHZAD</a>
             </p>
         </div>
     </footer>
 
-    <!-- ===== BACK TO TOP BUTTON ===== -->
     <button id="back-to-top" aria-label="بازگشت به بالا">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
             stroke-linecap="round" stroke-linejoin="round">
@@ -694,21 +677,7 @@
         </svg>
     </button>
 
-    <!-- Modal for Care Plan -->
-    <div id="care-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden z-50">
-        <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-[80vh] flex flex-col">
-            <div class="flex justify-between items-center p-4 border-b">
-                <h3 id="modal-title" class="text-xl font-bold text-gray-800">مراقبت‌های پس از درمان</h3>
-                <button id="close-modal-btn"
-                    class="text-gray-500 hover:text-gray-800 text-3xl leading-none">&times;</button>
-            </div>
-            <div id="modal-content" class="p-6 overflow-y-auto text-gray-700 leading-relaxed text-right">
-                <!-- Care instructions content goes here -->
-            </div>
-        </div>
-    </div>
     <script src="Script/main.js"></script>
-
 </body>
 
 </html>
